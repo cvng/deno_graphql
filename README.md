@@ -83,7 +83,7 @@ import {
   gql,
   graphqlHttp,
   makeExecutableSchema,
-} from "https://deno.land/x/deno_graphql/abc.ts";
+} from "https://deno.land/x/deno_graphql/attain.ts";
 
 const typeDefs = gql`
   type Query {
