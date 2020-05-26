@@ -74,3 +74,38 @@ app.post("/graphql", graphqlHttp({ schema, context }));
 
 app.start({ port: 4000 });
 ```
+
+## Setup with attain
+
+```js
+import { App, Request } from "https://deno.land/x/attain/mod.ts";
+import {
+  gql,
+  graphqlHttp,
+  makeExecutableSchema,
+} from "https://deno.land/x/deno_graphql/abc.ts";
+
+const typeDefs = gql`
+  type Query {
+    hello: String
+  }
+`;
+
+const resolvers = {
+  Query: {
+    hello: () => "Hello world!",
+  },
+};
+
+const context = (request: Request) => ({
+  request: request,
+});
+
+const schema = makeExecutableSchema({ typeDefs, resolvers });
+
+const app = new App();
+
+app.post("/graphql", graphqlHttp({ schema, context }));
+
+app.listen({ port: 4000 });
+```
