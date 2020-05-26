@@ -21,7 +21,7 @@ export type ServerContext<T> = T;
 export async function runHttpQuery(
   params: GraphQLParams,
   options: GraphQLOptions,
-  context: ServerContext<any>
+  context: ServerContext<any>,
 ): Promise<ExecutionResult> {
   if (!params) throw new Error("Bad Request");
 
@@ -35,7 +35,7 @@ export async function runHttpQuery(
     source: source,
     contextValue: contextValue,
     variableValues: params.variables,
-    operationName: params.operationName
+    operationName: params.operationName,
   };
 
   return await graphql(graphQLArgs);

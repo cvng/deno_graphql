@@ -1,6 +1,9 @@
 // Copyright 2020 the deno_graphql authors. All rights reserved. MIT license.
 
-import { RouterContext, RouterMiddleware } from "https://deno.land/x/oak@v4.0.0/mod.ts";
+import {
+  RouterContext,
+  RouterMiddleware,
+} from "https://deno.land/x/oak@v4.0.0/mod.ts";
 import { GraphQLOptions, GraphQLParams, runHttpQuery } from "./_graphql.ts";
 
 /**
