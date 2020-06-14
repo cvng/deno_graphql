@@ -1,6 +1,6 @@
 // Copyright 2020 the deno_graphql authors. All rights reserved. MIT license.
 
-import { Context, HandlerFunc } from "https://deno.land/x/abc@v1.0.0/mod.ts";
+import { Context, HandlerFunc } from "https://deno.land/x/abc@v1.0.0-rc10/mod.ts";
 import { GraphQLOptions, GraphQLParams, runHttpQuery } from "./_graphql.ts";
 
 /**
