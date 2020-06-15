@@ -1,1 +1,10 @@
-{"name":"deno-graphql","description":"GraphQL HTTP middlewares for Deno server frameworks.","stable":true,"files":["mod.ts"]}
+{
+    "name":"deno-graphql",
+    "description":"GraphQL HTTP middlewares for Deno server frameworks.",
+    "stable":true,
+    "files":[
+        "./README.md",
+        "mod.ts",
+        "./src/*"
+    ]
+}
